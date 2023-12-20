@@ -402,7 +402,7 @@ textarea {
     color: var(--clr-contrast-0);
 }
 
-.focus {
+textarea:focus {
     border: solid 0.2em var(--clr-primair-50);
 }
 
