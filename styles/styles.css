@@ -54,6 +54,7 @@ body {
     --clr-block: #333;
     --clr-blockhover: #4a4a4a;
     --clr-contrast-50: #999999;
+    --clr-heart: #f03c2f;
     --clr-secundair-50:#60C5F8;
     --clr-secundair-15: #006199;
 }
@@ -359,7 +360,6 @@ input {
     gap: 1.2em;
     flex-direction: column;
     justify-content: center;
-    background-color: ;
     width: 15em;
 }
 
@@ -393,12 +393,22 @@ input {
     position: absolute;
     bottom: 7em;
 }
+
+.inner-modal h3 {
+    padding-left: 3.2em;
+    padding-top: .5em;
+}
+
 /* Styling title all-saved-houses */
 .title-allsavedhouses {
     align-items: center;
     display: flex;
     flex-direction: column;
 }
+.title-allsavedhouses h2 {
+    padding-top: 1em;
+}
+
 .title-allsavedhouses article {
     display: flex;
     flex-direction: row;
@@ -431,6 +441,7 @@ input {
     display: flex;
     flex-direction: column;
     gap: 1.5em;
+    line-height: 1.5em;
     padding-top: 1.5em;
 }
 .saved-by-user article {
@@ -456,6 +467,11 @@ input {
     color: var(--clr-secundair-50);
     transition: color .25s cubic-bezier(.23,1,.32,1);
 }
+.saved-by-user span {
+    display: flex;
+    flex-direction: row;
+}
+
 .saved-by-user .adres {
     padding-left: .7em;
 }
@@ -489,6 +505,32 @@ input {
     width: 2em;
 }
 
+.breadcrumps {
+    display: flex;
+    gap: 1.5em;
+    flex-direction: column;
+    width: 22em;
+    margin-inline:auto;
+    padding-bottom: 3em;
+}
+
+.breadcrumps-link { 
+    display: flex;
+    gap: 1em;
+    flex-wrap: wrap;
+}
+
+.breadcrumps-link a {
+    background-color: var(--clr-block);
+    border-bottom: .3em solid var(--clr-primair-50);
+    padding: 1em;
+    color: var(--clr-contrast-100);
+}
+
+.breadcrumps-link a:hover {
+    background-color: var(--clr-blockhover);
+    transition: 0.4s ease-in;
+}
    /* FOOTER */
 
    footer {
@@ -655,6 +697,9 @@ input {
         gap: 14em;
         width: 34em;
     }
+    .breadcrumps {
+        width: 34em;
+    }
 }
 
 @media (min-width:987px) {
@@ -737,6 +782,9 @@ input {
         padding-left: 4em;
     }
     .bottom-line {
+        width: 58em;
+    }
+    .breadcrumps {
         width: 58em;
     }
     .title-allsavedhouses article {
